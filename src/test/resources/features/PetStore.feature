@@ -1,6 +1,6 @@
 Feature: PetStore
 
-  @TestCrearOrder
+  @Test
     Scenario Outline: Crear una nueva orden en PetStore
     Given preparo una orden con orderId <idOrder> y petId <idPet>
       When ejecuto la creación de la orden
@@ -13,7 +13,7 @@ Feature: PetStore
         | 20      | 10    | 200        |
         | 101     | 103   | 200        |
 
-  @TestConsultarOrder
+  @Test
   Scenario Outline: Consultamos una orden por el ID de la orden
     Given que existe o no , la orden con ID <idOrder>
     When consulto la orden por su ID

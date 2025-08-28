@@ -1,6 +1,7 @@
 package com.nttdata.steps;
 
-import com.nttdata.model.ConfigPet;
+import com.nttdata.model.ConfigStore;
+import com.nttdata.model.ConfigStore;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Assert;
@@ -19,7 +20,7 @@ public class ConsultarOrder {
 
     public void consultarOrder(){
         response = RestAssured.given()
-                .baseUri(ConfigPet.BASE_URL)
+                .baseUri(ConfigStore.BASE_URL)
                 .contentType("application/json")
                 .when()
                 .get("/store/order/"+ idOrder) // GET /pet/{id}
